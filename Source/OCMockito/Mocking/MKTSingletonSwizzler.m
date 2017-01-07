@@ -70,6 +70,11 @@ static NSString *singletonKey(Class aClass, SEL aSelector)
         singletonMap = [[NSMutableDictionary alloc] init];
 }
 
++ (void)resetSharedData
+{
+    singletonMap = nil;
+}
+
 + (id)mockSingleton
 {
     MKTSingletonMapEntry *singleton = singletonMap[singletonKey(self, _cmd)];

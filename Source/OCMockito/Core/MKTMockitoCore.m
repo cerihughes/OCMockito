@@ -13,12 +13,18 @@
 
 @implementation MKTMockitoCore
 
+static id sharedCore = nil;
+
 + (instancetype)sharedCore
 {
-    static id sharedCore = nil;
     if (!sharedCore)
         sharedCore = [[self alloc] init];
     return sharedCore;
+}
+
++ (void)resetSharedCore
+{
+    sharedCore = nil;
 }
 
 - (instancetype)init

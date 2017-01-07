@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MKTMockitoCore : NSObject
 
 + (instancetype)sharedCore;
++ (void)resetSharedCore;
 
 - (MKTOngoingStubbing *)stubAtLocation:(MKTTestLocation)location;
 

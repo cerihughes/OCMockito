@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) MKTTestLocation testLocation;
 
 + (instancetype)sharedProgress;
++ (void)resetSharedProgress;
 - (void)reset;
 
 - (void)stubbingStartedAtLocation:(MKTTestLocation)location;

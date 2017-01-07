@@ -17,12 +17,18 @@
 
 @implementation MKTMockingProgress
 
+static id sharedProgress = nil;
+
 + (instancetype)sharedProgress
 {
-    static id sharedProgress = nil;
     if (!sharedProgress)
         sharedProgress = [[self alloc] init];
     return sharedProgress;
+}
+
++ (void)resetSharedProgress
+{
+    sharedProgress = nil;
 }
 
 - (void)reset
