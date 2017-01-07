@@ -375,4 +375,18 @@ FOUNDATION_EXPORT void MKTStopMockingWithLocation(id mock, id testCase, const ch
 #define stopMocking(mock) MKTStopMocking(mock)
 #endif
 
+
+FOUNDATION_EXPORT void MKTReset(void);
+
+#ifndef MKT_DISABLE_SHORT_SYNTAX
+/*!
+ * @abstract Resets all static variables used by mockito.
+ *
+ * <b>Name Clash</b><br />
+ * In the event of a name clash, <code>#define MKT_DISABLE_SHORT_SYNTAX</code> and use the synonym
+ * MKTReset instead.
+ */
+#define resetMockito() MKTReset()
+#endif
+
 NS_ASSUME_NONNULL_END

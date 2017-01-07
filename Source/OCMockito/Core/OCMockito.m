@@ -3,10 +3,15 @@
 
 #import "OCMockito.h"
 
+#import "MKTArgumentGetterChain.h"
 #import "MKTAtLeastTimes.h"
 #import "MKTAtMostTimes.h"
 #import "MKTExactTimes.h"
+#import "MKTMockingProgress.h"
 #import "MKTMockitoCore.h"
+#import "MKTReturnValueSetterChain.h"
+#import "MKTSingletonSwizzler.h"
+#import "MKTUnspecifiedArgumentPlaceholder.h"
 
 
 static NSString *actualTypeName(id mock)
@@ -145,4 +150,14 @@ void MKTStopMockingWithLocation(id mock, id testCase, const char *fileName, int 
     if (reportedInvalidMock(mock, testCase, fileName, lineNumber, @"stopMocking()"))
         return;
     [mock mkt_stopMocking];
+}
+
+void MKTReset()
+{
+    [MKTMockitoCore resetSharedCore];
+    [MKTMockingProgress resetSharedProgress];
+    MKTResetArgumentGetterChain();
+    MKTResetReturnValueSetterChain();
+    [MKTUnspecifiedArgumentPlaceholder resetSharedPlaceholder];
+    [MKTSingletonSwizzler resetSharedData];
 }
