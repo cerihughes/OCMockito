@@ -62,6 +62,11 @@ static NSPointerArray *_trackedObjects;
 
 - (void)testResetting
 {
+    // The test needs to act is if it's the 1st thing to create a mock, so clear out all the old state 1st.
+    @autoreleasepool {
+        stopAllMocks();
+    }
+
     @autoreleasepool {
         NSString *aMock = mock([NSString class]);
 
