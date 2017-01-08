@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MKTSingletonSwizzler : NSObject
 
-+ (void)resetSharedData;
++ (void)resetSharedSingletonMap;
 
 - (instancetype)initWithMock:(MKTClassObjectMock *)classMock NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;

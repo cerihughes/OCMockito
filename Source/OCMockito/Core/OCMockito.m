@@ -159,5 +159,5 @@ void MKTStopAllMocks()
     MKTResetArgumentGetterChain();
     MKTResetReturnValueSetterChain();
     [MKTUnspecifiedArgumentPlaceholder resetSharedPlaceholder];
-    [MKTSingletonSwizzler resetSharedData];
+    [MKTSingletonSwizzler resetSharedSingletonMap];
 }
