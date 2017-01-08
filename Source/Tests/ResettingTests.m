@@ -78,7 +78,7 @@ static NSPointerArray *_trackedObjects;
     assertThatUnsignedInteger([self countOfAllocatedInstances], isNot(equalToUnsignedInteger(0u)));
 
     @autoreleasepool {
-        resetMockito();
+        stopAllMocks();
     }
 
     assertThatUnsignedInteger([self countOfAllocatedInstances], is(equalToUnsignedInteger(0u)));

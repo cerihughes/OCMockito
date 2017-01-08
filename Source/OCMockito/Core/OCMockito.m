@@ -152,7 +152,7 @@ void MKTStopMockingWithLocation(id mock, id testCase, const char *fileName, int 
     [mock mkt_stopMocking];
 }
 
-void MKTReset()
+void MKTStopAllMocks()
 {
     [MKTMockitoCore resetSharedCore];
     [MKTMockingProgress resetSharedProgress];
