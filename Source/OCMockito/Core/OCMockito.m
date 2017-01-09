@@ -9,6 +9,7 @@
 #import "MKTExactTimes.h"
 #import "MKTMockingProgress.h"
 #import "MKTMockitoCore.h"
+#import "MKTMockitoTracker.h"
 #import "MKTReturnValueSetterChain.h"
 #import "MKTSingletonSwizzler.h"
 #import "MKTUnspecifiedArgumentPlaceholder.h"
@@ -58,22 +59,22 @@ static BOOL reportedInvalidClassMethod(MKTClassObjectMock *theMock, SEL aSelecto
 
 id MKTMock(Class classToMock)
 {
-    return [[MKTObjectMock alloc] initWithClass:classToMock];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMock:classToMock];
 }
 
 id MKTMockClass(Class classToMock)
 {
-    return [[MKTClassObjectMock alloc] initWithClass:classToMock];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMockClass:classToMock];
 }
 
 id MKTMockProtocol(Protocol *protocolToMock)
 {
-    return [[MKTProtocolMock alloc] initWithProtocol:protocolToMock includeOptionalMethods:YES];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMockProtocol:protocolToMock];
 }
 
 id MKTMockProtocolWithoutOptionals(Protocol *protocolToMock)
 {
-    return [[MKTProtocolMock alloc] initWithProtocol:protocolToMock includeOptionalMethods:NO];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMockProtocolWithoutOptionals:protocolToMock];
 }
 
 id MKTMockObjectAndProtocol(Class classToMock, Protocol *protocolToMock)
@@ -145,22 +146,10 @@ id <MKTVerificationMode> MKTAtMost(NSUInteger maxNumberOfInvocations)
     return [[MKTAtMostTimes alloc] initWithMaximumCount:maxNumberOfInvocations];
 }
 
-void MKTDisableMockingWithLocation(id mock, id testCase, const char *fileName, int lineNumber)
-{
-    if (reportedInvalidMock(mock, testCase, fileName, lineNumber, @"disableMocking()"))
-        return;
-    [mock disableMocking];
-}
-
-void MKTStopMockingWithLocation(id mock, id testCase, const char *fileName, int lineNumber)
-{
-    if (reportedInvalidMock(mock, testCase, fileName, lineNumber, @"stopMocking()"))
-        return;
-    [mock stopMocking];
-}
-
 void MKTStopAllMocks()
 {
+    [[MKTMockitoTracker sharedTracker] stopTrackedMocks];
+    [MKTMockitoTracker resetSharedTracker];
     [MKTMockitoCore resetSharedCore];
     [MKTMockingProgress resetSharedProgress];
     MKTResetArgumentGetterChain();

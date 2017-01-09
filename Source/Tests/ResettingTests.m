@@ -77,7 +77,6 @@ static NSPointerArray *_trackedObjects;
         }];
 
         [aMock stringByAppendingString:@"FOO"];
-        stopMocking(aMock);
     }
 
     assertThatUnsignedInteger([self countOfAllocatedInstances], isNot(equalToUnsignedInteger(0u)));
