@@ -654,6 +654,10 @@
 		65A169991E212DA000D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
 		65A16A8F1E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
 		65A16A901E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
+		65EEDE271E1D327600463068 /* DisableMockingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE261E1D327600463068 /* DisableMockingTests.m */; };
+		65EEDE2A1E1D337400463068 /* ObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE291E1D337400463068 /* ObservableObject.m */; };
+		65EEDF231E1D389B00463068 /* DisableMockingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE261E1D327600463068 /* DisableMockingTests.m */; };
+		65EEDF241E1D38F400463068 /* ObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE291E1D337400463068 /* ObservableObject.m */; };
 		740018631A58E1BD00E9AC92 /* MKTReturnsValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 740018611A58E1BD00E9AC92 /* MKTReturnsValue.h */; };
 		740018641A58E1BD00E9AC92 /* MKTReturnsValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 740018611A58E1BD00E9AC92 /* MKTReturnsValue.h */; };
 		740018651A58E1BD00E9AC92 /* MKTReturnsValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 740018621A58E1BD00E9AC92 /* MKTReturnsValue.m */; };
@@ -1027,6 +1031,9 @@
 		6595767D1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTUnspecifiedArgumentPlaceholder.h; sourceTree = "<group>"; };
 		6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTUnspecifiedArgumentPlaceholder.m; sourceTree = "<group>"; };
 		65A16A8E1E21373800D0D45C /* ResettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResettingTests.m; sourceTree = "<group>"; };
+		65EEDE261E1D327600463068 /* DisableMockingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisableMockingTests.m; sourceTree = "<group>"; };
+		65EEDE281E1D337400463068 /* ObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservableObject.h; sourceTree = "<group>"; };
+		65EEDE291E1D337400463068 /* ObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservableObject.m; sourceTree = "<group>"; };
 		740018611A58E1BD00E9AC92 /* MKTReturnsValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTReturnsValue.h; sourceTree = "<group>"; };
 		740018621A58E1BD00E9AC92 /* MKTReturnsValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTReturnsValue.m; sourceTree = "<group>"; };
 		740018671A58E1E400E9AC92 /* MKTAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTAnswer.h; sourceTree = "<group>"; };
@@ -1248,6 +1255,8 @@
 				609E9ECEDA1F0A719513AAC4 /* DummyObject.m */,
 				609E9D120E577A372AE36EAA /* FakeLocation.h */,
 				609E9BDCD18394B0FFD08C75 /* FakeLocation.m */,
+				65EEDE281E1D337400463068 /* ObservableObject.h */,
+				65EEDE291E1D337400463068 /* ObservableObject.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1455,6 +1464,7 @@
 				08E9DC271516739A00BD7FB4 /* MKTObjectAndProtocolMockTests.m */,
 				085A8BC6150718E30018EC66 /* MKTProtocolMockTests.m */,
 				609E9F142955F412A8AFE0AD /* StopMockingTests.m */,
+				65EEDE261E1D327600463068 /* DisableMockingTests.m */,
 			);
 			name = Mocking;
 			sourceTree = "<group>";
@@ -2639,8 +2649,10 @@
 				74A3BD9D19F767AD006591C9 /* MKTObjectAndProtocolMockTests.m in Sources */,
 				74A3BDA119F767AD006591C9 /* BlockMatchingTests.m in Sources */,
 				74A3BD9E19F767AD006591C9 /* MKTProtocolMockTests.m in Sources */,
+				65EEDE2A1E1D337400463068 /* ObservableObject.m in Sources */,
 				74A3BDA219F767B8006591C9 /* MockTestCase.m in Sources */,
 				0EEDEB021C0949AF0078A8F0 /* MKTAtLeastNumberOfInvocationsCheckerTests.m in Sources */,
+				65EEDE271E1D327600463068 /* DisableMockingTests.m in Sources */,
 				74A3BDA819F767B8006591C9 /* VerifyProtocolTests.m in Sources */,
 				0E6B77491C07AE9B00DBF6E0 /* MKTNumberOfInvocationsCheckerTests.m in Sources */,
 				0EEDEB051C0966BB0078A8F0 /* MKTAtMostNumberOfInvocationsCheckerTests.m in Sources */,
@@ -2684,8 +2696,10 @@
 				74A3BDCF19F76DEA006591C9 /* MKTObjectAndProtocolMockTests.m in Sources */,
 				74A3BDD319F76DEA006591C9 /* BlockMatchingTests.m in Sources */,
 				74A3BDD019F76DEA006591C9 /* MKTProtocolMockTests.m in Sources */,
+				65EEDF241E1D38F400463068 /* ObservableObject.m in Sources */,
 				74A3BDD419F76DF0006591C9 /* MockTestCase.m in Sources */,
 				0EEDEB031C0949AF0078A8F0 /* MKTAtLeastNumberOfInvocationsCheckerTests.m in Sources */,
+				65EEDF231E1D389B00463068 /* DisableMockingTests.m in Sources */,
 				74A3BDDA19F76DF0006591C9 /* VerifyProtocolTests.m in Sources */,
 				0E6B774A1C07AE9B00DBF6E0 /* MKTNumberOfInvocationsCheckerTests.m in Sources */,
 				0EEDEB061C0966BB0078A8F0 /* MKTAtMostNumberOfInvocationsCheckerTests.m in Sources */,

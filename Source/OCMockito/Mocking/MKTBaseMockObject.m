@@ -1,5 +1,5 @@
 //  OCMockito by Jon Reid, http://qualitycoding.org/about/
-//  Copyright 2016 Jonathan M. Reid. See LICENSE.txt
+//  Copyright 2017 Jonathan M. Reid. See LICENSE.txt
 
 #import "MKTBaseMockObject.h"
 
@@ -16,7 +16,7 @@
 @interface MKTBaseMockObject ()
 @property (nonatomic, strong, readonly) MKTMockingProgress *mockingProgress;
 @property (nonatomic, strong) MKTInvocationContainer *invocationContainer;
-@property (nonatomic, assign) BOOL stoppedMocking;
+@property (nonatomic, assign) BOOL mockingDisabled;
 @end
 
 @implementation MKTBaseMockObject
@@ -40,16 +40,21 @@
     return self;
 }
 
-- (void)mkt_stopMocking
+- (void)disableMocking
 {
-    self.stoppedMocking = YES;
+    self.mockingDisabled = YES;
+}
+
+- (void)stopMocking
+{
+    [self disableMocking];
     self.invocationContainer = nil;
     [self.mockingProgress reset];
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    if (self.stoppedMocking)
+    if (self.mockingDisabled)
         return;
     if ([self handlingVerifyOfInvocation:invocation])
         return;

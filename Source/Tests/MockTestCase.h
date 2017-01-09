@@ -1,5 +1,5 @@
 //  OCMockito by Jon Reid, http://qualitycoding.org/about/
-//  Copyright 2016 Jonathan M. Reid. See LICENSE.txt
+//  Copyright 2017 Jonathan M. Reid. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
 
@@ -15,6 +15,9 @@
 
 #define stopMockingWithMockTestCase(mock, mockTestCase)  \
     MKTStopMockingWithLocation(mock, mockTestCase, __FILE__, __LINE__)
+
+#define disableMockingWithMockTestCase(mock, mockTestCase)  \
+    MKTDisableMockingWithLocation(mock, mockTestCase, __FILE__, __LINE__)
 
 
 @interface MockTestCase : NSObject

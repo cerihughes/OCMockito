@@ -1,5 +1,5 @@
 //  OCMockito by Jon Reid, http://qualitycoding.org/about/
-//  Copyright 2016 Jonathan M. Reid. See LICENSE.txt
+//  Copyright 2017 Jonathan M. Reid. See LICENSE.txt
 
 #import "OCMockito.h"
 
@@ -145,11 +145,18 @@ id <MKTVerificationMode> MKTAtMost(NSUInteger maxNumberOfInvocations)
     return [[MKTAtMostTimes alloc] initWithMaximumCount:maxNumberOfInvocations];
 }
 
+void MKTDisableMockingWithLocation(id mock, id testCase, const char *fileName, int lineNumber)
+{
+    if (reportedInvalidMock(mock, testCase, fileName, lineNumber, @"disableMocking()"))
+        return;
+    [mock disableMocking];
+}
+
 void MKTStopMockingWithLocation(id mock, id testCase, const char *fileName, int lineNumber)
 {
     if (reportedInvalidMock(mock, testCase, fileName, lineNumber, @"stopMocking()"))
         return;
-    [mock mkt_stopMocking];
+    [mock stopMocking];
 }
 
 void MKTStopAllMocks()
