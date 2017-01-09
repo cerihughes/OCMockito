@@ -66,26 +66,3 @@
 - (void)test2 {}
 
 @end
-
-
-@interface StopMockingProgrammerErrorTests : XCTestCase
-@end
-
-@implementation StopMockingProgrammerErrorTests
-{
-    MockTestCase *mockTestCase;
-}
-
-- (void)setUp
-{
-    [super setUp];
-    mockTestCase = [[MockTestCase alloc] init];
-}
-
-- (void)tearDown
-{
-    mockTestCase = nil;
-    [super tearDown];
-}
-
-@end

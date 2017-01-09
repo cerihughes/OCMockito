@@ -52,10 +52,10 @@ static NSPointerArray *_trackedObjects;
 {
     method_exchangeImplementations(ourAlloc, originalAlloc);
 
-    @autoreleasepool {
-        _trackedObjects.count = 0;
-        _trackedObjects = nil;
-    }
+    _trackedObjects.count = 0;
+    _trackedObjects = nil;
+    originalAlloc = nil;
+    ourAlloc = nil;
 
     [super tearDown];
 }

@@ -55,22 +55,8 @@
 
 - (void)tearDown
 {
-    // Without this disableMocking stage, 1 of the tests will fail, as we'll create a strong ref from
-    // a mock to an object that's being deallocated. The only other option would be for the test to know
-    // the correct order of stopMocking calls, which means that the test would need implementation-
-    // specific knowledge.
-    for (MKTBaseMockObject *trackedMock in trackedMocks) {
-        [trackedMock disableMocking];
-    }
-
-    while (trackedMocks.count > 0) {
-        MKTBaseMockObject *trackedMock = trackedMocks.firstObject;
-        [trackedMock stopMocking];
-        [trackedMocks removeObjectAtIndex:0];
-    }
-
+    stopAllMocks();
     trackedMocks = nil;
-
     [super tearDown];
 }
 
@@ -96,29 +82,6 @@
     
     [[DisableMockingTestsHelper alloc] initWithObservableObject1:mockObservableObject1
                                                observableObject2:mockObservableObject2];
-}
-
-@end
-
-
-@interface DisableMockingProgrammerErrorTests : XCTestCase
-@end
-
-@implementation DisableMockingProgrammerErrorTests
-{
-    MockTestCase *mockTestCase;
-}
-
-- (void)setUp
-{
-    [super setUp];
-    mockTestCase = [[MockTestCase alloc] init];
-}
-
-- (void)tearDown
-{
-    mockTestCase = nil;
-    [super tearDown];
 }
 
 @end
