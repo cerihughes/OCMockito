@@ -664,6 +664,8 @@
 		65A169991E212DA000D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
 		65A16A8F1E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
 		65A16A901E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
+		65D644841E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */; };
+		65D644851E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */; };
 		65EEDE271E1D327600463068 /* DisableMockingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE261E1D327600463068 /* DisableMockingTests.m */; };
 		65EEDE2A1E1D337400463068 /* ObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE291E1D337400463068 /* ObservableObject.m */; };
 		65EEDF231E1D389B00463068 /* DisableMockingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE261E1D327600463068 /* DisableMockingTests.m */; };
@@ -1043,6 +1045,7 @@
 		6595767D1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTUnspecifiedArgumentPlaceholder.h; sourceTree = "<group>"; };
 		6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTUnspecifiedArgumentPlaceholder.m; sourceTree = "<group>"; };
 		65A16A8E1E21373800D0D45C /* ResettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResettingTests.m; sourceTree = "<group>"; };
+		65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAllMocksTests.m; sourceTree = "<group>"; };
 		65EEDE261E1D327600463068 /* DisableMockingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisableMockingTests.m; sourceTree = "<group>"; };
 		65EEDE281E1D337400463068 /* ObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservableObject.h; sourceTree = "<group>"; };
 		65EEDE291E1D337400463068 /* ObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservableObject.m; sourceTree = "<group>"; };
@@ -1479,6 +1482,7 @@
 				085A8BC6150718E30018EC66 /* MKTProtocolMockTests.m */,
 				609E9F142955F412A8AFE0AD /* StopMockingTests.m */,
 				65EEDE261E1D327600463068 /* DisableMockingTests.m */,
+				65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */,
 			);
 			name = Mocking;
 			sourceTree = "<group>";
@@ -2699,6 +2703,7 @@
 				74A3BDAE19F767B8006591C9 /* VerifyCountAtLeastTimesTests.m in Sources */,
 				74A3BD9B19F767AD006591C9 /* MKTClassObjectMockTests.m in Sources */,
 				74A3BDA319F767B8006591C9 /* NSInvocation+OCMockitoTests.m in Sources */,
+				65D644841E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */,
 				74A3BD9C19F767AD006591C9 /* MKTObjectMockTests.m in Sources */,
 				481D6E991D7CE05100F2C988 /* StubSingletonProgrammerErrorTests.m in Sources */,
 				65A16A8F1E21373800D0D45C /* ResettingTests.m in Sources */,
@@ -2746,6 +2751,7 @@
 				74A3BDE019F76DF0006591C9 /* VerifyCountAtLeastTimesTests.m in Sources */,
 				74A3BDCD19F76DEA006591C9 /* MKTClassObjectMockTests.m in Sources */,
 				74A3BDD519F76DF0006591C9 /* NSInvocation+OCMockitoTests.m in Sources */,
+				65D644851E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */,
 				74A3BDCE19F76DEA006591C9 /* MKTObjectMockTests.m in Sources */,
 				481D6E9A1D7CE05100F2C988 /* StubSingletonProgrammerErrorTests.m in Sources */,
 				65A16A901E21373800D0D45C /* ResettingTests.m in Sources */,

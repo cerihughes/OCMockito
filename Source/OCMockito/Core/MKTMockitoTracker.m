@@ -33,7 +33,7 @@ static MKTMockitoTracker *sharedTracker = nil;
     return self;
 }
 
-- (id)createAndTrackMock:(Class)classToMock
+- (id)createAndTrackMockObject:(Class)classToMock
 {
     id theMock = [[MKTObjectMock alloc] initWithClass:classToMock];
     [self.trackedMocks addObject:theMock];

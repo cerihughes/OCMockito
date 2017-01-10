@@ -59,7 +59,7 @@ static BOOL reportedInvalidClassMethod(MKTClassObjectMock *theMock, SEL aSelecto
 
 id MKTMock(Class classToMock)
 {
-    return [[MKTMockitoTracker sharedTracker] createAndTrackMock:classToMock];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMockObject:classToMock];
 }
 
 id MKTMockClass(Class classToMock)
@@ -79,7 +79,7 @@ id MKTMockProtocolWithoutOptionals(Protocol *protocolToMock)
 
 id MKTMockObjectAndProtocol(Class classToMock, Protocol *protocolToMock)
 {
-    return [[MKTObjectAndProtocolMock alloc] initWithClass:classToMock protocol:protocolToMock];
+    return [[MKTMockitoTracker sharedTracker] createAndTrackMockObject:classToMock andProtocol:protocolToMock];
 }
 
 MKTOngoingStubbing *MKTGivenWithLocation(id testCase, const char *fileName, int lineNumber, ...)

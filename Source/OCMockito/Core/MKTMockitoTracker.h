@@ -8,7 +8,7 @@
 + (instancetype)sharedTracker;
 + (void)resetSharedTracker;
 
-- (id)createAndTrackMock:(Class)classToMock;
+- (id)createAndTrackMockObject:(Class)classToMock;
 - (id)createAndTrackMockClass:(Class)classToMock;
 - (id)createAndTrackMockProtocol:(Protocol *)protocolToMock;
 - (id)createAndTrackMockProtocolWithoutOptionals:(Protocol *)protocolToMock;
