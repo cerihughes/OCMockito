@@ -48,6 +48,7 @@
         stopAllMocks();
         mockUserDefaultsClass = nil;
     }
+
     assertThat([NSUserDefaults standardUserDefaults], is(instanceOf([NSUserDefaults class])));
 }
 
