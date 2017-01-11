@@ -362,7 +362,11 @@ FOUNDATION_EXPORT void MKTStopAllMocks(void);
 
 #ifndef MKT_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract Stops all mocks and frees all memory used by OCMockito
+ * @abstract Stops mocking and releases arguments.
+ * @discussion Mock objects normally retain all message arguments. This is not a problem for most
+ * tests, but can sometimes cause retain cycles. In such cases, call stopMocking to tell the framework
+ * to release arguments and to stop accepting messages for all mocks created since the last time
+ * stopAllMocks() was called. See StopMockingTests.m for an example.
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define MKT_DISABLE_SHORT_SYNTAX</code> and use the synonym
