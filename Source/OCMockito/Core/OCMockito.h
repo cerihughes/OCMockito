@@ -364,9 +364,10 @@ FOUNDATION_EXPORT void MKTStopAllMocks(void);
 /*!
  * @abstract Stops mocking and releases arguments.
  * @discussion Mock objects normally retain all message arguments. This is not a problem for most
- * tests, but can sometimes cause retain cycles. In such cases, call stopMocking to tell the framework
- * to release arguments and to stop accepting messages for all mocks created since the last time
- * stopAllMocks() was called. See StopMockingTests.m for an example.
+ * tests, but can sometimes cause retain cycles. To get around this, the framework will keep a
+ * reference to all mocks it creates and will only release them when stopAllMocks is called.
+ * At this point, the framework will also release arguments and stop accepting messages for all
+ * mocks created up to this point. See StopMockingTests.m for an example.
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define MKT_DISABLE_SHORT_SYNTAX</code> and use the synonym
