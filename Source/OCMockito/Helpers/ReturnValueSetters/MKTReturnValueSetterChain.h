@@ -13,9 +13,4 @@ NS_ASSUME_NONNULL_BEGIN
  */
 FOUNDATION_EXPORT MKTReturnValueSetter *MKTReturnValueSetterChain(void);
 
-/*!
- * @abstract Sets the return value setter chain to nil, deallocating all of the nodes.
- */
-FOUNDATION_EXPORT void MKTResetReturnValueSetterChain(void);
-
 NS_ASSUME_NONNULL_END

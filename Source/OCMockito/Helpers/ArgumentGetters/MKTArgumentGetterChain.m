@@ -23,10 +23,9 @@
 #import "MKTStructArgumentGetter.h"
 
 
-static MKTArgumentGetter *chain = nil;
-
 MKTArgumentGetter *MKTArgumentGetterChain(void)
 {
+    static MKTArgumentGetter *chain = nil;
     if (!chain)
     {
         MKTArgumentGetter *structGetter = [[MKTStructArgumentGetter alloc] initWithSuccessor:nil];
@@ -50,9 +49,4 @@ MKTArgumentGetter *MKTArgumentGetterChain(void)
         chain = objectGetter;
     }
     return chain;
-}
-
-void MKTResetArgumentGetterChain(void)
-{
-    chain = nil;
 }

@@ -11,18 +11,12 @@
 
 @implementation MKTMockitoTracker
 
-static MKTMockitoTracker *sharedTracker = nil;
-
 + (instancetype)sharedTracker
 {
+    static id sharedTracker = nil;
     if (!sharedTracker)
         sharedTracker = [[self alloc] init];
     return sharedTracker;
-}
-
-+ (void)resetSharedTracker
-{
-    sharedTracker = nil;
 }
 
 - (instancetype)init

@@ -656,14 +656,6 @@
 		65430DAA1E23DEF700632ED8 /* MKTMockitoTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 65430DA21E23DEF700632ED8 /* MKTMockitoTracker.m */; };
 		65430DAB1E23DEF700632ED8 /* MKTMockitoTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 65430DA21E23DEF700632ED8 /* MKTMockitoTracker.m */; };
 		65430DAC1E23DEF700632ED8 /* MKTMockitoTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 65430DA21E23DEF700632ED8 /* MKTMockitoTracker.m */; };
-		6595767F1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6595767D1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h */; };
-		659576801E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
-		65A169961E212D9A00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
-		65A169971E212D9F00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
-		65A169981E212D9F00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
-		65A169991E212DA000D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */; };
-		65A16A8F1E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
-		65A16A901E21373800D0D45C /* ResettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A16A8E1E21373800D0D45C /* ResettingTests.m */; };
 		65D644841E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */; };
 		65D644851E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */; };
 		65EEDE271E1D327600463068 /* DisableMockingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EEDE261E1D327600463068 /* DisableMockingTests.m */; };
@@ -1042,9 +1034,6 @@
 		638F68DC150FC3210081DEE6 /* MKTClassObjectMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTClassObjectMockTests.m; sourceTree = "<group>"; };
 		65430DA11E23DEF700632ED8 /* MKTMockitoTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTMockitoTracker.h; sourceTree = "<group>"; };
 		65430DA21E23DEF700632ED8 /* MKTMockitoTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTMockitoTracker.m; sourceTree = "<group>"; };
-		6595767D1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTUnspecifiedArgumentPlaceholder.h; sourceTree = "<group>"; };
-		6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTUnspecifiedArgumentPlaceholder.m; sourceTree = "<group>"; };
-		65A16A8E1E21373800D0D45C /* ResettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResettingTests.m; sourceTree = "<group>"; };
 		65D644831E24FD7B00D510B8 /* StopAllMocksTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAllMocksTests.m; sourceTree = "<group>"; };
 		65EEDE261E1D327600463068 /* DisableMockingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisableMockingTests.m; sourceTree = "<group>"; };
 		65EEDE281E1D337400463068 /* ObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservableObject.h; sourceTree = "<group>"; };
@@ -1298,8 +1287,6 @@
 				609E91510EE6160A67EAF450 /* MKTInvocation.m */,
 				08F189FF135A6D8C00F76379 /* MKTInvocationMatcher.h */,
 				08F18A00135A6D8C00F76379 /* MKTInvocationMatcher.m */,
-				6595767D1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h */,
-				6595767E1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m */,
 				609E963E76556893CBC8FBD6 /* MKTLocation.h */,
 				609E9B11C7F5BCA246F3ED64 /* MKTLocation.m */,
 				609E962857601A6E8BF744F4 /* MKTMatchingInvocationsFinder.h */,
@@ -1494,7 +1481,6 @@
 				085CE8F1172A0D43004D070D /* BlockMatchingTests.m */,
 				08F189E21359661E00F76379 /* MKTMockingProgressTests.m */,
 				0E5F66391D209EBB00D01554 /* StubbingCopyTests.m */,
-				65A16A8E1E21373800D0D45C /* ResettingTests.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1711,7 +1697,6 @@
 				361533C6153F275800BB982B /* MKTAtLeastTimes.h in Headers */,
 				BB333F04719B4E40829FB969 /* NSInvocation+OCMockito.h in Headers */,
 				BB333374E46A437A3138DD5C /* MKTArgumentGetter.h in Headers */,
-				6595767F1E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.h in Headers */,
 				BB33362CA822D5D861F2B184 /* MKTArgumentGetterChain.h in Headers */,
 				748491921A5919EC006A7579 /* MKTExecutesBlock.h in Headers */,
 				BB333E5C9685C25DF71DDB5E /* MKTBoolArgumentGetter.h in Headers */,
@@ -2310,7 +2295,6 @@
 				BB333D7AEC43B5987BA6D43F /* MKTReturnValueSetter.m in Sources */,
 				BB33325A91A444BC65713775 /* MKTReturnValueSetterChain.m in Sources */,
 				BB33324D672D4A557564B43D /* MKTShortReturnSetter.m in Sources */,
-				65A169961E212D9A00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */,
 				BB3338E483AE15D8699D697A /* MKTUnsignedCharReturnSetter.m in Sources */,
 				BB333A68102711EFF5143871 /* MKTUnsignedIntReturnSetter.m in Sources */,
 				BB333A41A79C8271C3BEC779 /* MKTUnsignedLongLongReturnSetter.m in Sources */,
@@ -2393,7 +2377,6 @@
 				BB333C68932C7366C594C15D /* MKTReturnValueSetter.m in Sources */,
 				BB333557C973438681FAD33A /* MKTReturnValueSetterChain.m in Sources */,
 				BB333C515BD2EC5BB5150BDC /* MKTShortReturnSetter.m in Sources */,
-				659576801E212BA300DF57F3 /* MKTUnspecifiedArgumentPlaceholder.m in Sources */,
 				BB333D35B7F18436369CA263 /* MKTUnsignedCharReturnSetter.m in Sources */,
 				BB3338A5F1D8E9DF73B0805B /* MKTUnsignedIntReturnSetter.m in Sources */,
 				BB333BDD50DD7A25085E3A7D /* MKTUnsignedLongLongReturnSetter.m in Sources */,
@@ -2476,7 +2459,6 @@
 				247B9FE11C335EE500B10720 /* MKTDoubleArgumentGetter.m in Sources */,
 				247BA0091C335EF900B10720 /* MKTIntReturnSetter.m in Sources */,
 				247BA06F1C335F0400B10720 /* MKTInvocation.m in Sources */,
-				65A169971E212D9F00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */,
 				247B9FDF1C335EE500B10720 /* MKTClassArgumentGetter.m in Sources */,
 				247BA0EE1C335F3000B10720 /* MKTAtLeastNumberOfInvocationsChecker.m in Sources */,
 				247B9F6C1C335EB200B10720 /* OCMockito.m in Sources */,
@@ -2559,7 +2541,6 @@
 				247B9FB91C335EE400B10720 /* MKTDoubleArgumentGetter.m in Sources */,
 				247BA02D1C335EFA00B10720 /* MKTIntReturnSetter.m in Sources */,
 				247BA0811C335F0500B10720 /* MKTInvocation.m in Sources */,
-				65A169981E212D9F00D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */,
 				247B9FB71C335EE400B10720 /* MKTClassArgumentGetter.m in Sources */,
 				247BA1011C335F3100B10720 /* MKTAtLeastNumberOfInvocationsChecker.m in Sources */,
 				247B9F751C335EB200B10720 /* OCMockito.m in Sources */,
@@ -2642,7 +2623,6 @@
 				247B9F911C335EE300B10720 /* MKTDoubleArgumentGetter.m in Sources */,
 				247BA0511C335EFA00B10720 /* MKTIntReturnSetter.m in Sources */,
 				247BA0931C335F0500B10720 /* MKTInvocation.m in Sources */,
-				65A169991E212DA000D0D45C /* MKTUnspecifiedArgumentPlaceholder.m in Sources */,
 				247B9F8F1C335EE300B10720 /* MKTClassArgumentGetter.m in Sources */,
 				247BA1141C335F3200B10720 /* MKTAtLeastNumberOfInvocationsChecker.m in Sources */,
 				247B9F7E1C335EB300B10720 /* OCMockito.m in Sources */,
@@ -2706,7 +2686,6 @@
 				65D644841E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */,
 				74A3BD9C19F767AD006591C9 /* MKTObjectMockTests.m in Sources */,
 				481D6E991D7CE05100F2C988 /* StubSingletonProgrammerErrorTests.m in Sources */,
-				65A16A8F1E21373800D0D45C /* ResettingTests.m in Sources */,
 				74A3BDA419F767B8006591C9 /* StubClassTests.m in Sources */,
 				74A3BDAA19F767B8006591C9 /* VerifyObjectAndProtocolTests.m in Sources */,
 				609E921622C17A290D2A8674 /* StopMockingTests.m in Sources */,
@@ -2754,7 +2733,6 @@
 				65D644851E24FD7B00D510B8 /* StopAllMocksTests.m in Sources */,
 				74A3BDCE19F76DEA006591C9 /* MKTObjectMockTests.m in Sources */,
 				481D6E9A1D7CE05100F2C988 /* StubSingletonProgrammerErrorTests.m in Sources */,
-				65A16A901E21373800D0D45C /* ResettingTests.m in Sources */,
 				74A3BDD619F76DF0006591C9 /* StubClassTests.m in Sources */,
 				74A3BDDC19F76DF0006591C9 /* VerifyObjectAndProtocolTests.m in Sources */,
 				609E9A4411D8D4601FA86822 /* StopMockingTests.m in Sources */,

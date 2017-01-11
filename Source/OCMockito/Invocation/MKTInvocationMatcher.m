@@ -3,12 +3,27 @@
 
 #import "MKTInvocationMatcher.h"
 
-#import "MKTUnspecifiedArgumentPlaceholder.h"
 #import "NSInvocation+OCMockito.h"
 #import <OCHamcrest/HCArgumentCaptor.h>
 #import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsNil.h>
 #import <OCHamcrest/HCWrapInMatcher.h>
+
+
+@interface MKTUnspecifiedArgumentPlaceholder : NSObject
+@end
+
+@implementation MKTUnspecifiedArgumentPlaceholder
+
++ (instancetype)sharedPlaceholder
+{
+    static MKTUnspecifiedArgumentPlaceholder *instance = nil;
+    if (!instance)
+        instance = [[self alloc] init];
+    return instance;
+}
+
+@end
 
 
 @interface MKTInvocationMatcher ()

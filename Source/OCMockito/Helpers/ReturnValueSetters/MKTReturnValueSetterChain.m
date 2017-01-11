@@ -21,10 +21,9 @@
 #import "MKTStructReturnSetter.h"
 
 
-static MKTReturnValueSetter *chain = nil;
-
 MKTReturnValueSetter *MKTReturnValueSetterChain(void)
 {
+    static MKTReturnValueSetter *chain = nil;
     if (!chain)
     {
         MKTReturnValueSetter *structSetter = [[MKTStructReturnSetter alloc] initWithSuccessor:nil];
@@ -46,9 +45,4 @@ MKTReturnValueSetter *MKTReturnValueSetterChain(void)
         chain = objectSetter;
     }
     return chain;
-}
-
-void MKTResetReturnValueSetterChain(void)
-{
-    chain = nil;
 }

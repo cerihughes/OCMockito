@@ -6,7 +6,6 @@
 @interface MKTMockitoTracker : NSObject
 
 + (instancetype)sharedTracker;
-+ (void)resetSharedTracker;
 
 - (id)createAndTrackMockObject:(Class)classToMock;
 - (id)createAndTrackMockClass:(Class)classToMock;

@@ -3,16 +3,11 @@
 
 #import "OCMockito.h"
 
-#import "MKTArgumentGetterChain.h"
 #import "MKTAtLeastTimes.h"
 #import "MKTAtMostTimes.h"
 #import "MKTExactTimes.h"
-#import "MKTMockingProgress.h"
 #import "MKTMockitoCore.h"
 #import "MKTMockitoTracker.h"
-#import "MKTReturnValueSetterChain.h"
-#import "MKTSingletonSwizzler.h"
-#import "MKTUnspecifiedArgumentPlaceholder.h"
 
 
 static NSString *actualTypeName(id mock)
@@ -149,11 +144,4 @@ id <MKTVerificationMode> MKTAtMost(NSUInteger maxNumberOfInvocations)
 void MKTStopAllMocks()
 {
     [[MKTMockitoTracker sharedTracker] stopTrackedMocks];
-    [MKTMockitoTracker resetSharedTracker];
-    [MKTMockitoCore resetSharedCore];
-    [MKTMockingProgress resetSharedProgress];
-    MKTResetArgumentGetterChain();
-    MKTResetReturnValueSetterChain();
-    [MKTUnspecifiedArgumentPlaceholder resetSharedPlaceholder];
-    [MKTSingletonSwizzler resetSharedSingletonMap];
 }
